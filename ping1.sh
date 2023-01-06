@@ -33,3 +33,5 @@ docker stop Container_A Container_B
 docker rm   Container_A Container_B
 docker network rm pingBridge1
 echo "Container und Netzwerk heruntergefahren und entfernt"
+
+echo "Test für neue Version - git push"
