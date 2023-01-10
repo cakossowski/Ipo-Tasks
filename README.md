@@ -7,3 +7,11 @@ General hints:
 - No "manual" actions
 - Scripts need to be stored in revision control system
 - Documentation of every setup needed
+
+```mermaid
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+```
