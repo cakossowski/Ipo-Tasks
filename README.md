@@ -8,6 +8,7 @@ General hints:
 - Scripts need to be stored in revision control system
 - Documentation of every setup needed
 
+
 ```mermaid
 ---
 title: Task 1
