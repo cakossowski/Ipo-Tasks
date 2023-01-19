@@ -12,7 +12,7 @@ General hints:
 ---
 title: Task 1
 ---
-classDiagram LR
+classDiagram
     note "Containers created with Docker"
     Container_A *--* Container_B
     Container_A : image "ubuntu-ping" from dockerfile
