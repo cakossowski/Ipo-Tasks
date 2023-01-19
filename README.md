@@ -17,8 +17,8 @@ classDiagram
     Container_A < -- > Duck
     Container_A <|-- Fish
     Container_A <|-- Zebra
-    Container_A : +int age
-    Container_A : +String gender
+    Container_A : image "ubuntu-ping" from dockerfile
+    Container_A : IP 123.123.123.123 Port:123
 
 
 
