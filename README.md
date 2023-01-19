@@ -10,10 +10,10 @@ General hints:
 
 ```mermaid
 classDiagram
-<<Docker-Container>> Container_A
-Container_A : IP: XXX.XXX.XXX.XXX Port XX
-Container_A : Image ubuntu-ping
+<<Docker-Container>> ContainerA
+ContainerA : IP: XXX.XXX.XXX.XXX Port XX
+ContainerA : Image ubuntu-ping
 
-Container_A <--> Container_B : Verbindung via eth0 und Netzwerk pingBridge1
+ContainerA <--> ContainerB : Verbindung via eth0 und Netzwerk pingBridge1
 
 ```
