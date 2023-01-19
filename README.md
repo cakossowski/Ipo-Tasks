@@ -10,31 +10,16 @@ General hints:
 
 ```mermaid
 ---
-title: Animal example
+title: Task 1
 ---
 classDiagram
-    note "From Duck till Zebra"
-    Animal <|-- Duck
-    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
-    }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
-    }
-    class Zebra{
-        +bool is_wild
-        +run()
-    }
+    note "Containers created with Docker"
+    Container_A <|-- Duck
+    Container_A <|-- Fish
+    Container_A <|-- Zebra
+    Container_A : +int age
+    Container_A : +String gender
+
 
 
 ```
