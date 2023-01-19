@@ -15,11 +15,11 @@ title: Task 1
 ---
 classDiagram
     note "Containers created with Docker"
-    Container_A(Client 1) -- Container_B(Client 2)
-    Container_A(Client 1) : image "ubuntu-ping" from dockerfile
-    Container_A(Client 1) : IP 123.123.123.123 Port 80 eth0
-    Container_B(Client 2) : image "ubuntu-ping" from dockerfile
-    Container_B(Client 2) : IP 123.123.123.123 Port 80 eth1
+    Container_C1 -- Container_C2
+    Container_C1 : image "ubuntu-ping" from dockerfile
+    Container_C1 : IP 123.123.123.123 Port 80 eth0
+    Container_C2 : image "ubuntu-ping" from dockerfile
+    Container_C2 : IP 123.123.123.123 Port 80 eth1
 
 
 
