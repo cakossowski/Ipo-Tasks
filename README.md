@@ -9,9 +9,11 @@ General hints:
 - Documentation of every setup needed
 
 ```mermaid
-graph TD;
-  A-->B;
-  A-->C;
-  B-->D;
-  C-->D;
+classDiagram;
+<<Docker-Container>> Container_A
+Container_A : IP: XXX.XXX.XXX.XXX Port XX
+Container_A : Image ubuntu-ping
+
+Container_A <--> Container_B : Verbindung via eth0 und Netzwerk pingBridge1
+
 ```
