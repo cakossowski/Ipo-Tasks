@@ -10,7 +10,7 @@ General hints:
 
 ```mermaid
 classDiagram
-<<Docker-Container>> ContainerA
+<<Dockercontainer>> ContainerA
 ContainerA : IP: XXX.XXX.XXX.XXX Port XX
 ContainerA : Image ubuntu-ping
 
