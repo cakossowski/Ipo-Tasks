@@ -14,7 +14,7 @@ title: Task 1
 ---
 classDiagram
     note "Containers created with Docker"
-    Container_A <|-- Duck
+    Container_A < -- > Duck
     Container_A <|-- Fish
     Container_A <|-- Zebra
     Container_A : +int age
