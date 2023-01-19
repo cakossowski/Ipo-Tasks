@@ -18,7 +18,7 @@ classDiagram
     Container_A <|-- Fish
     Container_A <|-- Zebra
     Container_A : image "ubuntu-ping" from dockerfile
-    Container_A : IP 123.123.123.123 Port:123
+    Container_A : IP 123.123.123.123:80
 
 
 
