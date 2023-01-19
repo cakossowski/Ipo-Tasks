@@ -12,9 +12,9 @@ General hints:
 ---
 title: Task 1
 ---
-classDiagram
+classDiagram LR
     note "Containers created with Docker"
-    Container_A < -- > Container_B
+    Container_A *--* Container_B
     Container_A : image "ubuntu-ping" from dockerfile
     Container_A : IP 123.123.123.123 Port 80 eth0
     Container_B : image "ubuntu-ping" from dockerfile
