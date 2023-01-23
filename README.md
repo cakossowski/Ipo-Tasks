@@ -2,6 +2,8 @@
 
 Tasks are given during first practical phase of the three-year dual course of study (computer science)
 
+Used technology for my solutions are docker / docker-compose / bash / python (in later stages)
+
 ## General hints:
 
 - Machines need to be either a VM or docker container
