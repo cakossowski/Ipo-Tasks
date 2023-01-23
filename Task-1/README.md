@@ -2,7 +2,7 @@
 
 General task:
 
-Ping from A to B (A-B)
+Ping from A to B (Client1 - Client2)
 
 
 ```mermaid
@@ -10,12 +10,12 @@ Ping from A to B (A-B)
 title: Task 1
 ---
 classDiagram
-    note "Containers created with Docker // in same network net1 (Subnet 1.1.1.0/16)"
-    Container_C1 -- Container_C2
-    Container_C1 : image "ubuntu-ping" from dockerfile
-    Container_C1 : IP 1.1.1.1
-    Container_C2 : image "ubuntu-ping" from dockerfile
-    Container_C2 : IP 1.1.1.2
+    note "Containers created with Docker // in same network net1 (adress dynamically set by docker)"
+    Client1 -- Client2
+    Client1 : image "ubuntu-ping" from dockerfile
+    Client1 : IP-Address set by docker (stored in variable c1_net1)
+    Client2 : image "ubuntu-ping" from dockerfile
+    Client2 : IP-Address set by docker (stored in variable c2_net1)
 
 
 
