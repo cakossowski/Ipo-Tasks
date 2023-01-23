@@ -1,26 +1,20 @@
-# Solution to Task 1 "Ping A to B"
+# Explanation for Repository
 
-General hints:
+
+Tasks are given during first practical phase of the three-year dual course of study (computer science)
+
+## General hints:
 
 - Machines need to be either a VM or docker container
 - Script is need to create the setup, create and test network traffic, remove setup again
 - No "manual" actions
 - Scripts need to be stored in revision control system
-- Documentation of every setup needed
+- Documentation of every setup needed (with an image)
 
-
-```mermaid
----
-title: Task 1
----
-classDiagram
-    note "Containers created with Docker // in same network pingBridge1 connected through eth0"
-    Container_C1 -- Container_C2
-    Container_C1 : image "ubuntu-ping" from dockerfile
-    Container_C1 : IP 123.123.123.123 Port 80 eth0
-    Container_C2 : image "ubuntu-ping" from dockerfile
-    Container_C2 : IP 123.123.123.123 Port 80 eth1
-
-
-
-```
+## Tasks
+ping from A to B (A-B)
+ping over a router C from A to B (A-C-B)
+ping over a transfer network between C and D from A to B (A-C-D-B). There is no knowledge about the transfer network in A or B
+ping over two transfer networks from A to B (A-C-E-D-B). No knowledge about the transfer networks in A or B
+ping over a redundant mesh from a to B (A-C-E1,E2-D-B), power off E1 and/or E2, handle the fail-over manually with a script
+configure the last step with dynamic routing, there should be no fail-over script necessary
