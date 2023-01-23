@@ -10,12 +10,12 @@ Ping from A to B (A-B)
 title: Task 1
 ---
 classDiagram
-    note "Containers created with Docker // in same network pingBridge1 connected through eth0"
+    note "Containers created with Docker // in same network net1 (Subnet 1.1.1.0/16)"
     Container_C1 -- Container_C2
     Container_C1 : image "ubuntu-ping" from dockerfile
-    Container_C1 : IP 123.123.123.123 Port 80 eth0
+    Container_C1 : IP 1.1.1.1
     Container_C2 : image "ubuntu-ping" from dockerfile
-    Container_C2 : IP 123.123.123.123 Port 80 eth1
+    Container_C2 : IP 1.1.1.2
 
 
 
