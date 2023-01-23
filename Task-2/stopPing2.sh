@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# shutdown and remove created networks netz1/netz2
-docker network rm netz1 && docker network rm netz2
+# shutdown and remove created networks net1/net2
+docker network rm net1 net2
 
-# kill and remove created containers C1, C2 (Clients) and R1 (Router)
-docker kill Client1 Client2 Router1 && docker remove Client1 Client2 Router1
+# kill and remove created containers
+docker kill Client1 Client2 Router1 && docker rm Client1 Client2 Router1
+
+echo "Networks removed. Containers killed and removed"
