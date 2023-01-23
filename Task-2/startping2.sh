@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # create networks needed for task-2
-docker network create --driver=bridge --subnet=1.1.1.0/16 netz1
-docker network create --driver=bridge --subnet=1.1.1.50/16 netz2
+docker network create --driver=bridge --subnet=1.1.1.0/16 net1
+docker network create --driver=bridge --subnet=1.1.1.50/16 net2
 
-# create containers C1, C2 (Clients) and R1 (Router)
-docker run -itd --privileged --net netz1 --name Client1 --ip 1.1.1.1 ubuntu-ping bash
-docker run -itd --privileged --net netz1 --name Router1 --ip 1.1.1.5 ubuntu-ping bash
-docker run -itd --privileged --net netz2 --name Client2 --ip 1.1.1.2 ubuntu-ping bash
+# create containers Client1, Client2 and Router1
+docker run -itd --privileged --net net1 --name Client1 --ip 1.1.1.1 ubuntu-ping bash
+docker run -itd --privileged --net net1 --name Router1 --ip 1.1.1.5 ubuntu-ping bash
+docker run -itd --privileged --net net2 --name Client2 --ip 1.1.1.2 ubuntu-ping bash
 
-# add router R1 to remaining network
-docker network connect netz2 R1
+# add router Router1 to remaining network
+docker network connect net2 R1
 
 # change settings for each container to change default gateway
 docker exec -it Client1 ip route replace default via 1.1.1.5
