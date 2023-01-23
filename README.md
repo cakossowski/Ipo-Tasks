@@ -1,8 +1,14 @@
 # Explanation for Repository
 
-Tasks are given during first practical phase of the three-year dual course of study (computer science)
+Tasks were given during first practical phase of the three-year dual course of study (computer science)
 
 Used technology for my solutions are docker / docker-compose / bash / python (in later stages)
+
+Each folder (one for each task) contains a start script (startPingX.sh), shutdown script (stopPingX) and a README.md
+Every docker container is derived from the same dockerimage (ubuntu-ping), the according Dockerfile
+resides within this repository. 
+Inspiration for the dockerfile was taken from Francisco Castello on his tech blog: https://pancho.dev
+
 
 ## General hints:
 
