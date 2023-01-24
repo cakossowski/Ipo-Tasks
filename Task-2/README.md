@@ -19,7 +19,7 @@ Also an ping/traceroute are ran in startPing1.sh to each container to show the c
 title: Task 2
 ---
 flowchart LR
-    Client1<-->|Dynamic IP set by docker and lies within network "net1" - default gateway of client set to router1|Router1
-    Router1<-->|Dynamic IP set by docker and lies within network "net2" - default gateway of client set to router1|Client2
+    Client1<-->|Dynamic IP set by docker and lies within network net1 - default gateway of client set to router1|Router1
+    Router1<-->|Dynamic IP set by docker and lies within network net2 - default gateway of client set to router1|Client2
 
 ```
