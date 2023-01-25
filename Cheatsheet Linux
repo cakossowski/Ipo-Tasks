@@ -1,0 +1,33 @@
+NETZWERK:
+_________________________________________
+brctl show (aktive Bridges anzeigen in docker)
+
+sudo tcpdump -i BRIDGENAME (zB docker0) (Netztraffic auf Host abhören um zu prüfen 
+ob Datenpakete den falschen Weg gehen)
+
+ip a (welche Bridges sind aktiv, Namen wie br-0xxxxxxxxxxx)
+
+
+
+
+ORDNER - / FILEBERECHTIGUNGEN
+__________________________________________
+
+cd ..  Ordner verlassen
+
+chmod +x filename.XX  - anpassen Berechtigungen File
+
+
+
+
+GIT / GITHub
+__________________________________________
+
+git init (am besten vorm Klonen des Repos)
+git status
+git commit -m "TEXT"
+gh auth login
+git clone GITHUBURL
+git remote add origin GITHUBURL
+
+git push origin master
