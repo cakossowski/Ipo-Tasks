@@ -5,9 +5,9 @@ docker network create net1
 docker network create net2
 
 # create containers Client1, Client2 and Router1
-docker run -itd --privileged --net net1 --name Client1 ubuntu-ping bash
-docker run -itd --privileged --net net1 --name Router1 ubuntu-ping bash
-docker run -itd --privileged --net net2 --name Client2 ubuntu-ping bash
+docker run -itd --cap-add NET_ADMIN --net net1 --name Client1 ubuntu-ping bash
+docker run -itd --cap-add NET_ADMIN --net net1 --name Router1 ubuntu-ping bash
+docker run -itd --cap-add NET_ADMIN --net net2 --name Client2 ubuntu-ping bash
 
 # add router Router1 to remaining network
 docker network connect net2 Router1

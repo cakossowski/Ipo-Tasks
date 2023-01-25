@@ -4,8 +4,8 @@
 docker network create net1
 
 # create containers Client1, Client2
-docker run -itd --privileged --net net1 --name Client1 ubuntu-ping bash
-docker run -itd --privileged --net net1 --name Client2 ubuntu-ping bash
+docker run -itd --cap-add NET_ADMIN --net net1 --name Client1 ubuntu-ping bash
+docker run -itd --cap-add NET_ADMIN --net net1 --name Client2 ubuntu-ping bash
 
 # get IP-Addresses of each container in their respective network
 c1_net1=$(docker container inspect Client1 --format "{{ .NetworkSettings.Networks.net1.IPAddress }}")
