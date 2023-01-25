@@ -7,5 +7,3 @@ docker kill Client1 Client2 && docker rm Client1 Client2
 docker network rm net1
 
 echo "Network removed. Containers killed and removed"
-
-# comment for test purposes only
