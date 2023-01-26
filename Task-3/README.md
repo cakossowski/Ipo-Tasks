@@ -16,24 +16,25 @@ title: Task 3
 ---
 classDiagram
 
-    Client1 -- Transfer1
-    Transfer1 -- Transfer2
-    Transfer2 -- Client2
+    Client1 <-- Transfer1
+    Transfer1 <--> Transfer2
+    Transfer2 --> Client2
+    
     Client1 : image "ubuntu-ping" from dockerfile
     Client1 : IP-Address "xxx.xxx.xxx.xxx"
     Client1 : Network net1
 
     Client2 : image "ubuntu-ping" from dockerfile
     Client2 : IP-Address "xxx.xxx.xxx.xxx"
-    Client2 : Network net1
+    Client2 : Network net2
 
     Transfer1 : image "ubuntu-ping" from dockerfile
     Transfer1 : IP-Address "xxx.xxx.xxx.xxx"
-    Transfer1 : Network net1
+    Transfer1 : Network net1 & transfer1
     
     Transfer2 : image "ubuntu-ping" from dockerfile
     Transfer2 : IP-Address "xxx.xxx.xxx.xxx"
-    Transfer2 : Network net1
+    Transfer2 : Network net2 & transfer1
 
 
 

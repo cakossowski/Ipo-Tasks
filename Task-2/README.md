@@ -1,4 +1,4 @@
-# Solution to Task 1 "Ping A to B"
+# Solution to Task 2 "Ping A to B over C"
 
 General task:
 
