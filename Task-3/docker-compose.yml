@@ -5,7 +5,8 @@ services:
     image: "ubuntu-ping"
     tty: true
     networks:
-      - net1
+      net1:
+        ipv4_address: 172.27.0.2
     cap_add:
       - NET_ADMIN
     
@@ -13,7 +14,8 @@ services:
     image: "ubuntu-ping"
     tty: true
     networks:
-      - net2
+      net2:
+        ipv4_address: 172.26.0.2
     cap_add:
       - NET_ADMIN
     
@@ -21,8 +23,10 @@ services:
     image: "ubuntu-ping"
     tty: true
     networks:
-      - net1
-      - transfer1
+      net1:
+        ipv4_address: 172.27.0.3
+      transfernet1:
+        ipv4_address: 172.25.0.3
     cap_add:
       - NET_ADMIN
     
@@ -30,17 +34,31 @@ services:
     image: "ubuntu-ping"
     tty: true
     networks:
-      - net2
-      - transfer1    
+      net2:
+        ipv4_address: 172.26.0.3
+      transfernet1:
+        ipv4_address: 172.25.0.2 
     cap_add:
       - NET_ADMIN
     
 networks:
   net1:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.27.0.0/16
+          gateway: 172.27.0.1
   
   net2:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.26.0.0/16
+          gateway: 172.26.0.1
   
-  transfer1:
+  transfernet1:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
+          gateway: 172.25.0.1
